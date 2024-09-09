@@ -1,0 +1,142 @@
+
+body {
+    font-family: Calibri, serif;
+    max-width: 1000px; /* begrænser bredden af siden til max 1000px, så den ikke bliver for bred på store skærme */
+    margin: 2em auto; /* placerer hele siden midt på skærmen med en 2em margen foroven og forneden - auto centrerer siden horisontalt*/
+}
+
+
+
+.container {
+    display: grid;  /* gør containeren til et grid der giver mulighed for at arrangerer elementer i rækker og kolonner */
+    grid-template-columns: 1fr 1fr; /* opdeler og definerer 2 lige brede kolonner hvor 1fr er en fraktion af den tilgængelige plads */
+    gap: 20px /* tilføjer 20px mellemrum mellem elementerne placeret i grid*/
+}
+
+.side-hoved {
+    grid-column: 1/3; /* definerer hvor henne i griddet elementet skal placeres. denne notation siger, at elementet skal strække sig over alle kolonner på siden */
+    grid-row: 1; /* fortæller at elementet skal placerer sig på række 1*/
+    background-color: white;
+    display: flex; /* gør elementet til en flex-container der tillader fleksibel placering */
+    align-items: center; /* justerer indholdet i midten lodret */
+
+    padding: 10px 20px 20px;
+    border-radius: 10px; /* gør hjørnerne runde med en radius på 10px*/
+    font-size: large;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.1);
+}
+
+.side-fod {
+    grid-column: 1/3;
+    grid-row: 4;
+    background-color: white;
+    display: flex;
+    align-items: center;
+
+    padding: 10px 20px 20px;
+    border-radius: 10px;
+    font-size: large;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.1); /* tilføjer en svag skygge under elementet med rgba hvor 'a' er en alfa kanal*/
+}
+
+
+
+.logo {
+    width: 50px;
+}
+
+ul {
+    list-style-type: none; /* fjerner punkttegn fra listen og arrangerer menupunkterne på en vandret række*/
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* bruges hvis man ønsker indhold ikke skal strække sig udover boksen som indholdet befinder sig i*/
+    background-color: white;
+    gap: 50px;
+}
+
+li {
+    float: left; /* bruges til at få elementer til at placerer sig ved siden af hindanden på den vandrette akse*/
+    display: block; /* får elementet til at opfører sig som en 'blok', altså 100% bredde af sin container*/
+    text-align: center;
+    text-decoration: none; /*  bruges til at fjerne understregning, som f.eks. ved links*/
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 20px;
+}
+
+li:hover {
+    transform: scale(1.1);
+    background-color: lightgray;
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.2);
+
+}
+
+.banner {
+    grid-column: 1/3;
+    grid-row: 2;
+    position: relative;
+
+}
+
+.banner-picture {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.1);
+}
+
+.billed-tekst {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: 500px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.museum-choice {
+    display: grid; /* laver et nyt grid, for at display de 3 billeder*/
+    grid-template-columns: 1fr 1fr 1fr; /*definerer grid til at have 3 colums*/
+    gap: 20px;
+    grid-column: 1/3; /*positionerer sectionen på det første grid under 'div' tagget*/
+    grid-row: 3;
+
+    cursor: pointer; /* ændrer muse markøren til en hånd når man 'hover' over elementet*/
+    transition: all 0.3s ease-in-out; /* bruges til skabe en glidende effekt over tid når musen sættes over elementet*/
+}
+
+.billed-et, .billed-to, .billed-tre {
+    object-fit: cover; /* sikrer at billedet fylder området uden at ændre forholdet*/
+    border-radius: 10px;
+
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.1);
+}
+
+a:hover {
+    transform: scale(1.1); /* forstørrer elementet med 10% når man holder musen over*/
+
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.2);
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -17,9 +17,9 @@ public class TouristRepository {
     }
 
     public void populateTouristAttractions() {
-        touristAttractions.add(new TouristAttraction("Statens Museum for Kunst", "Danmarks nationalmuseum for kunst"));
+        touristAttractions.add(new TouristAttraction("SMK", "Danmarks nationalmuseum for kunst"));
         touristAttractions.add(new TouristAttraction("Medicinsk Museion", "Museum med udstillinger vedrørende krop, sundhed og sygdom gennem tiden" ));
-        touristAttractions.add(new TouristAttraction("Tivoli", "Danmarks ældste forlystelsespark"));
+        touristAttractions.add(new TouristAttraction("Nationalmuseet", "Danmarks nationale museum"));
     }
 
     public List<TouristAttraction> getTouristAttractions() {
